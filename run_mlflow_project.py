@@ -10,10 +10,7 @@ if __name__ == "__main__":
 
     project_uri = os.path.join(os.path.dirname(os.path.abspath(__file__)), "thesis-mlflow-project")
     params = {"alpha": sys.argv[1], "l1_ratio": sys.argv[2]}
-    print(sys.argv[3])
-    mlflow.set_tracking_uri(sys.argv[3])
-    print(mlflow.get_tracking_uri())
-    os.environ['MLFLOW_TRACKING_URI'] = sys.argv[3]
+
     mlflow.run(
         project_uri,
         parameters=params,

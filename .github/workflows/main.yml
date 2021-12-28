@@ -34,4 +34,5 @@ jobs:
       - name: Run mlflow project remotely
         run: |
           pip install -r requirements.txt
-          python run_mlflow_project.py "${{ github.event.inputs.alpha }}" "${{ github.event.inputs.l1_ratio }}" "${{ github.event.inputs.mlflow_tracking_uri }}"
+          export MLFLOW_TRACKING_URI="${{ github.event.inputs.mlflow_tracking_uri }}"
+          python run_mlflow_project.py "${{ github.event.inputs.alpha }}" "${{ github.event.inputs.l1_ratio }}"
