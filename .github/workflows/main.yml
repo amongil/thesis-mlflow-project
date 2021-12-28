@@ -33,5 +33,5 @@ jobs:
       #     mlflow_tracking_uri: "${{ github.event.inputs.mlflow_tracking_uri }}"
       - name: Run mlflow project remotely
         run: |
-          pip install -r actions/run-mlflow-project/requirements.txt
+          pip install -r requirements.txt
           python run_mlflow_project.py "${{ github.event.inputs.alpha }}" "${{ github.event.inputs.l1_ratio }}" "${{ github.event.inputs.mlflow_tracking_uri }}"
