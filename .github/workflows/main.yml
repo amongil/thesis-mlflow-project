@@ -22,9 +22,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - name: Run mlflow project remotely
         uses: ./actions/run-mlflow-project
-        id: run
         with:
           alpha: "${{ github.event.inputs.alpha }}"
           l1_ratio: "${{ github.event.inputs.l1_ratio }}"
