@@ -1,6 +1,5 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Run mlflow project'
+description: 'Runs an mlflow project on a remote server'
 inputs:
   alpha:
     description: 'Alpha value'
