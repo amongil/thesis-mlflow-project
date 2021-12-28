@@ -1,5 +1,8 @@
-FROM alpine:3.10
+FROM python:3.7.6
 
-COPY run_mlflow_project.py /run_mlflow_project.py
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY run_mlflow_project.py /run_mlflow_project
+RUN chmod u+x /mlflow_tracking_get_runs.py
 
-ENTRYPOINT ["python run_mlflow_project.py"]
+ENTRYPOINT ["python",  "/mlflow_tracking_get_runs.py"]
