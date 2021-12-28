@@ -2,6 +2,18 @@ name: run_mlflow_experiment
 
 on:
   workflow_dispatch:
+    inputs:
+      alpha:
+        description: 'alpha value'     
+        required: true
+        default: '0.4'
+      l1_ratio:
+        description: 'l1_ratio value'
+        required: true
+        default: '0.1'
+      mlflow_tracking_uri:
+        description: 'FQDN of the MLFLOW server"
+        required: true
 
 jobs:
   build:
@@ -23,10 +35,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: Run mlflow project remotely
         uses: ./actions/run-mlflow-project
         id: run
         with:
-          who-to-greet: 'Mona the Octocat'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.run.outputs.time }}"
+          alpha: "${{ github.event.inputs.alpha }}"
+          l1_ratio: "${{ github.event.inputs.l1_ratio }}"
