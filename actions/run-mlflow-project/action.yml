@@ -3,10 +3,13 @@ name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
   alpha:
-    description: 'Alpha alue'
+    description: 'Alpha value'
     required: true
   l1_ratio:
-    description: 'l1_ratio alue'
+    description: 'l1_ratio value'
+    required: true
+  mlflow_tracking_uri:
+    description: 'FQDN of the MLFLOW server'
     required: true
 
 # outputs:
