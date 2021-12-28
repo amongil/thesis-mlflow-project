@@ -18,3 +18,4 @@ runs:
   args:
     - ${{ inputs.alpha }}
     - ${{ inputs.l1_ratio }}
+    - ${{ inputs.mlflow_tracking_uri }}
