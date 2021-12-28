@@ -12,6 +12,7 @@ if __name__ == "__main__":
     params = {"alpha": sys.argv[1], "l1_ratio": sys.argv[2]}
 
     mlflow.set_tracking_uri(sys.argv[3])
+    os.environ['MLFLOW_TRACKING_URI'] = sys.argv[3]
     mlflow.run(
         project_uri,
         parameters=params,
