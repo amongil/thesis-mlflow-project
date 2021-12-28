@@ -1,0 +1,11 @@
+name: thesis-mlflow-project
+
+docker_env:
+  image:  localhost:5000/thesis-mlflow-project
+
+entry_points:
+  main:
+    parameters:
+      alpha: {type: float, default: 0.4}
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py --alpha {alpha} --l1-ratio {l1_ratio}"

@@ -1,0 +1,5 @@
+{
+    "kube-context": "kind-kind",
+    "kube-job-template-path": "thesis-mlflow-project/kubernetes_job_template.yaml",
+    "repository-uri": "localhost:5000/thesis-mlflow-project"
+}
