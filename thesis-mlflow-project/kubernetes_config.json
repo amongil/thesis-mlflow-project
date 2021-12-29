@@ -1,5 +1,5 @@
 {
     "kube-context": "kind-kind",
     "kube-job-template-path": "thesis-mlflow-project/kubernetes_job_template.yaml",
-    "repository-uri": "3aad-139-47-59-192.ngrok.io/thesis-mlflow-project"
+    "repository-uri": "38a7-139-47-59-192.ngrok.io/thesis-mlflow-project"
 }
