@@ -1,7 +1,7 @@
 name: thesis-mlflow-project
 
 docker_env:
-  image: 52b0-139-47-59-192.eu.ngrok.io/thesis-mlflow-project
+  image: a2c7-139-47-59-192.eu.ngrok.io/thesis-mlflow-project
 
 entry_points:
   main:
