@@ -33,6 +33,6 @@ jobs:
           pip install -r requirements.txt
           export KUBECONFIG=${{ github.workspace }}/kube_config
           export KUBERNETES_SERVICE_HOST="${{ github.event.inputs.kubernetes_service_address }}"
-          export KUBERNETES_SERVICE_PORT=80
+          export KUBERNETES_SERVICE_PORT=443
           export MLFLOW_TRACKING_URI="${{ github.event.inputs.mlflow_tracking_uri }}"
           python run_mlflow_project.py "${{ github.event.inputs.alpha }}" "${{ github.event.inputs.l1_ratio }}"
